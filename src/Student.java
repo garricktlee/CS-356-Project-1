@@ -1,24 +1,23 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class Student {
 	
-	private int studentID;
+	private UUID studentID;
 	private List<String> answers = new ArrayList<String>();  // Program to interface
 	
-	//possibly not unique
 	public Student(){
-		setStudentID((int)(Math.random()*System.currentTimeMillis()/(Math.random()*1000000)));
+		setStudentID(UUID.randomUUID());
 	}
 	
-	public int getStudentID() {
+	public UUID getStudentID() {
 		return studentID;
 	}
 	
-	//student ID is current time in milliseconds
-	public void setStudentID(int d) {		
-		this.studentID = d;
+	public void setStudentID(UUID uuid) {		
+		this.studentID = uuid;
 	}
 	public List<String> getAnswers() {
 		return answers;
@@ -29,9 +28,7 @@ public class Student {
 	}
 	
 	public void printAnswers(){
-		for(String answer : this.answers){
-			System.out.print(answer);
-		}
+			System.out.print(getAnswers());
 	}
 	
 }

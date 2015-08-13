@@ -23,15 +23,6 @@ public abstract class Questions {
 		}
 	}
 
-	// compares answers returns bool
-	public boolean isCorrect(List<String> studentAnswer) {
-		if (getAnswers().equals(studentAnswer)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	public List<String> getChoices() {
 		return this.choices;
 	}
