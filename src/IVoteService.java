@@ -35,7 +35,7 @@ public class IVoteService {
 			}
 		}
 		
-		System.out.println("The correct answer is: " + q.getAnswers());
+		System.out.println("The correct answer is: " + answers);
 		System.out.println("Right : " + right + " Wrong  : " + wrong);
 		
 	}

@@ -45,7 +45,6 @@ public class SimulationDriver {
 	}
 
 	private static Student[] generateAnswers(Student[] students, Questions q) {
-		System.out.println(q.getClass());
 		if (q.getClass().toString().contains("SingleChoiceQuestion")) {
 			for(int i = 0; i < students.length; i++){
 				students[i].addAnswers(q.choices.get((int)(Math.floor((Math.random()*q.choices.size())))));
@@ -54,7 +53,7 @@ public class SimulationDriver {
 		} else if (q.getClass().toString().contains("MultipleChoiceQuestion")) {
 			for (int i = 0; i < students.length; i++) {
 				for (String choice : q.getChoices()) {
-					if ((Math.floor((Math.random() * 100) % 7) == 0))
+					if ((Math.floor((Math.random() * 100) % 3) == 0))
 						students[i].addAnswers(choice);
 				}
 			}
